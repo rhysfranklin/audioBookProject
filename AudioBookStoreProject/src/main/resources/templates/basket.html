@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<h1 id="demoFont">My basket</h1>
+	<br />
+	<a href="/homepage" class="myButton">Home</a>
+	<br />
+	<br />
+	<a href="/search" class="myButton">Search catalogue</a>
+	<br />
+	<br />
+	<br />
+
+	<table class="table_back">
+		<tr>
+			<th>Title</th>
+			<th>Author</th>
+			<th>Narrator</th>
+			<th>Price</th>
+			<th>Delete</th>
+
+		</tr>
+		<tr th:each="book : ${session.booksInBasket}">
+			<td th:text="${book.title}"></td>
+			<td th:text="${book.author}"></td>
+			<td th:text="${book.narrator}"></td>
+			<td th:text="${book.price}"></td>
+			<td>
+			
+			<a th:href="@{/deleteBook(title=${book.title})}" >Delete</a>
+			</td>
+		</tr>
+	</table>
+	<br />
+	
+	<div class="error">
+		<span th:text=${emptyBasket}></span>
+	</div>
+	<div class="error">
+		<span th:text="${conIncorrect}"></span>
+	</div>
+	<br />
+	
+	<a href="/checkout" class="myButton">Checkout</a>
+
+
+</body>
+</html>

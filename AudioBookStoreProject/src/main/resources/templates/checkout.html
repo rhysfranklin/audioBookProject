@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Checkout</title>
+<link rel="stylesheet" href="style.css">
+<style>
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+div {
+  width: 35%;
+  margin-left: 30%;
+  margin-right: 30% -moz-box-shadow: inset 0px 1px 0px 0px #ffffff;
+  height: 35%;
+  border-radius: 100px;
+  background-color: #ededed;
+  padding: 60px;
+}
+</style>
+</head>
+<body>
+<h1 id="demoFont"> Checkout</h1>
+<a href="/basket" class="myButton">Back to basket</a><br /><br />
+
+<h3 id="demoFont">Total Price:</h3>
+<div id="demoFont">
+<span id="demoFont" th:text="${total}"></span></div><br />
+
+<h3 id="demoFont">Confirm Purchase</h3>
+
+<!-- <form class="myButton" action="ConfirmPurchase" method="get">
+   Email : <input class="myInput" type="text" name="conEmail" /><br />
+   Password : <input class="myInput" type="text" name="conPassword" /><br />
+   Security code : <input class="myInput" type="text" name="conSecurityCode" /><br />
+    <input type="submit" value="confirm" />
+</form> -->
+
+
+<div>
+  <form action="ConfirmPurchase" method="get">
+  
+    <label for="Email">Email</label>
+    <input type="text" id="Email" required name="conEmail" placeholder="Your email..">
+    
+    <label for="Password">Password</label>
+    <input type="text" id="Password" required name="conPassword" placeholder="Your password..">
+    
+    <label for="Security code">Security code</label>
+    <input type="text" id="Security code" required name="conSecurityCode" placeholder="Your security code..">
+
+    <input type="submit" value="Submit">
+  </form>
+</div>
+
+</body>
+</html>

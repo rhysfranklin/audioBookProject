@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Insert title here</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<h1 id="demoFont">Purchase Successful</h1>
+	<a href="/remove" class="myButton">Home</a>
+	<br />
+
+<h2 id="demoFont">Billing address:</h2>
+	<div id="demoFont">
+		<p>
+			First line address: <span th:text="${session.loggedinUser.firstLineAddress}"></span>
+		</p>
+		<p>
+			Post code: <span th:text="${session.loggedinUser.postcode}"></span>
+		</p>
+	</div><br />
+	
+	<h2 id="demoFont">Purchase information:</h2>
+	<div id="demoFont">
+		<p>
+			CardName: <span th:text="${session.loggedinUser.cardName}"></span>
+		</p>
+		<p>
+			Card Number: <span th:text="${session.loggedinUser.cardNumber}"></span>
+		</p>
+		<p>
+			Expiry Date: <span th:text="${session.loggedinUser.expiryDate}"></span>
+		</p>
+	</div><br />
+	
+<h3 id="demoFont">Books purchased:</h3>
+	<table class="table_back">
+		<tr>
+			<th>Title</th>
+			<th>Author</th>
+			<th>Narrator</th>
+			<th>Price</th>
+		</tr>
+		<tr th:each="book : ${session.booksInBasket}">
+			<td th:text="${book.title}"></td>
+			<td th:text="${book.author}"></td>
+			<td th:text="${book.narrator}"></td>
+			<td th:text="${book.price}"></td>
+		</tr>
+	</table>
+	<br />
+	<br />
+</body>
+</html>

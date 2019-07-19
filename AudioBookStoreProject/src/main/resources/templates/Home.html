@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Home page</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+	<img
+		src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAflBMVEX///8AAAD7+/tgYGAkJCRqamru7u6SkpL5+fn19fX29vYyMjItLS3x8fG/v793d3fi4+Xe3+Hm5+lFRUXZ2tw3NzcVFRXNzc20tLTLy8tvb2+mpqbW1tZUVFSMjIwNDQ0fHx+Dg4OampqsrKxbW1uenp59fX27u7s/Pz88PDzTTvnuAAAInklEQVR4nO2da7uqLBCGO1p2Mu2gllpmtdb+/3/wrRQFBQUDqfXOs7/sa1XALTgM44C9HggEAoFAIBAIBAKBQCAQCAQCgUDSNTXW9nZrO6buhsiW6XrRIVz0cZ034zjxHd1Ne1+GPxn267SJVt+LOXOjeS1d3p/3laG7seKa/YxPXHiZwuN3Qa7GInQIMhnobjennEkLvFRWoLvxHHKvrfme2v3oBmiQv6G2exFaR88PDHP2lLm0/Z8kvu6o3x198mD1f6sNPh+OAcuILNdeTMHcHzttNb+2YaWtB695sjP9aFS5LJ84Vpdl83mO+M2GcSyP7t+PsznHUgstV7AA41JyD+5TJQ1tKZvsgnkya1OKSzp4+5XsZrbXhWhZ6LcuyInJ2/hDrOqS6MDwvRtoFhGMH3E3rvAWbd5vkkn040RCC98Ufs0l3TkOfj+GrW5peRrgc2AkrVj/jF22tbRiW8jA5uqdLbNkfKi2t1xvK8CacZNdNtaN2rw4zMaMtvKLt7Tbm5+iBWMlE5dXVBCrKF+gflWjyN7nVdwVVVEjDFDUBeXXYKMPsRiiZ6XRwOJm7Hig+nnF/xQHsIugz0VtRaTWebUb5c7xLa/LU11VIbMA7KC2AlHdDV/Wvy4B8dV1Vw8ADt0CYuvPRTcLxvySLjpz+/MFzLiL2rb5mOnwSUMe5ko6qCz3MxS4omzlYVX1a6l8Cu42pLlET7LmqmvK1xNd+8L5Sk3eOpuqGRqjXZnRQvm0qDY6lY9RDc8zUcBE6Th1EaCOYO0UVS47nIAL5VN0Mi1VlK9nlsqqSFAVmhJiUJTxoKqCAQLs0MknZKieitFSLVRUfrOOaluw7M6tYAo9gVOzjkLur5a4VyYUW1AyHefLXq15d6HCTkSLNL1Pg5DzpuJORF2o+akl6kSpT0le8thdODCcdeD6brB2jPcXxTOsNMrVRJ0oP36KUmWq/kRcRKb7/f0ujJOgXZLBNEjicEeURrFqKEgsO5HBZl86WpbeJl6JtWC6imnpVBT3EK3fZK/246xcylzIykMMb7wT5/pWTTZiEvayZ5a/7+BUhRw2mgmrybScc2SNGseaPFsaITLqcm0NGhq00EV9LumwfuZy65OkaYTIO5W72EchUtpnTdmyO7aj7tHTE+sJe1l+50IS20vTLA5k0T5szgdmJBse942/pBKidaLMFQZyB6kjjivjudqPXvOPWEvt7EOZD6PirEzqh3w53XMyo8LnS+OnE2b37k4iYWagqYOUk/Bhcwq7atTblyZC1P3ywmFOViI9/sSfl49ux3KqpihhfXvaqP6aCew8SKdT1vTOTYgiYvJWqve0QMa4FyA8P13pwbn5iw2E2WL8LI0waxJjihUgHL0IK2ndwoTIAZHlfSOXrTrszU4Iq0EF5NbIWumjSHfpNlxZaa8qJ4z6VvniZnONrFSlLBBMeEnpzqZJJ4SvKOaYgMxmG1mh4czQXPG/pQ5Xh4T9PV599iBKVsgt83SJ+MWic0JyCGWfSyLMBj3hWmomRHO+pMhmRkgYLs2E6EmbJL8tIyRiUJoJkVcjl5CYXnUThgoIR8TfdBMOFRCSlvkvEhLT4Z8kHAIhEAIhEAIhEFJ1/wrC9ocwOOf9VxAeTi1z+F3ki346odUyJPVcRn8NYZvw9+sR1vcQimcTpoGQLyIU7cUsa+WbCMXyv1FM+asIhSZHtHXruwj/8QPGeYu+ipD/aVuxzf7LCLlvxWKf/bcR8tpTIARCIARCIARCIARCIARCIARCIARCIARCIARCIARCJYS8O3zaEA4/gjC5rYLt2nGc9Tbwk4lVs2erkXBuTRI/L211Sz6CsKo1fdtyPeEmXjH2DX8g4VOzlVUlYRGOrFXNRv4PJXwqiEu7RKmE+7jhgcoHEz7LIl7KQiG8Nrfqswl7PQN7sU6FcMLz3FY+YXGCrgzCB9INDVaScH/jS2biJ+Q9B7A4YVYO4QPqSCE88iZr8RNyn36U72IVITR8b2INw3DzUHgd3y8e/uK4aVQijLDNDY7vXe7ja/rTcGhNPB8fvdyEAlvZhmKExk/M2Pm6O9zcrKueu5tzQrTreeDeDoxTB8L4xxAjJHPtGzTiJwyipl2v8yil9E+nF+Hp5Kd0jW+eS9/Gw0lIbghpksFHeDEvnE7mePWAG7yG5jR6/pf31WyjRx18hIK5plsuQvKtjfXax8Vt6ZRdgVotuAiFz5AIeAgFNU5t3brNm/WaCFuc+WnLJ8z2uzcdaNKGsNVhNcuRdMJ07xR93fEO4ajlaZiDYf8rCMfX9iesHYUJ94vf8Dp8TN67M+UtnUzC03m3ef3ud8GyQWzC93flcxGG0dHdkgZ7aQcJuRSmEG7iJLDJQWZs3WNUcSH07LdINbz4dfeB7R1Qd5KEp4NXZyCW/gUPAWkiPA0TLisWTOYlwvmEy77byfCkj3ARuQJHbwR3jPAuMH1N3WihgXB/vghPQdMkO58mET6TxL6ciTMVOiCUf/Rkk8ga1RPqllzCxZ8nNP1op/MEaJoe0+Uuqp2kRDULNL7BjiI/0PxeRBAIBAKBQCAQCAQCgUAgEEi5BlRNq6J/UXfzq6JRzAiZdSK/SqPXjEUikY1fiojKXcbtEA3jogIZ7UQlxlgVg+JwBBsTy+EXE7bKqQaTAUdDq7Z+XacGWJKzjCkXb1DCq8IxuWy2mKxVzBKkxK4s9R+j9+hwOcmWpgZORk/K70eyB01qDzrPf1XCekAaIsb3/EfrRZPsRQmEvZpByuhEGuSLM0W1MTY6XkMXSgasWlG2nRGxMTX2pt7WKLKoDEr6VFE1kJyi2VFiwlA9LWKezIycNtiTYg0z47s5GWuSUO7ckB5bxV8ruWMMjCpQxZkxcddNj5daeMdlj9tsp7IHXlTQLRhDA0KU1RJ2CagfkgXoxhHRoE66GwcCgUAgEAgEAoFAoP+L/gMZqeHzA7knzQAAAABJRU5ErkJggg=="
+		alt="Logo" class="centerImage"><br />
+	<h1 id="demoFont">Welcome to Audiobook!</h1>
+	<br />
+	<h2 id="demoFont">please create an account or login to browse our
+		store</h2>
+	<br />
+
+	<a href="/loginpage" class="myButton">Login</a>
+	<br />
+	<br />
+	<a href="/createAccount" class="myButton">Create Account</a>
+	<br />
+	<br />
+	<a href="/search" class="myButton">Search catalogue</a>
+	<br />
+	<br />
+	<span th:if="${session.loggedinUser != null }"> <a
+		th:href="@{/logoutpage}" class="myButton">Logout</a></span>
+	<br />
+	<br />
+	<span th:if="${session.loggedinUser != null }"> <a
+		th:href="@{/accountDetails}" class="myButton">Account Details</a></span>
+	<br />
+	<br />
+	<span th:if="${session.loggedinUser != null }"> <a
+		th:href="@{/basket}" class="myButton">Basket</a></span>
+	<br />
+	<br />
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<h1 id="demoFont">Results of your search:</h1>
+	<br />
+<table class="table_back">
+		<tr>
+			<th>Title</th>
+			<th>Author</th>
+			<th>Narrator</th>
+			<th>Price</th>
+		</tr>
+		<tr>
+			<td th:text="${foundTitle}"></td>
+			<td th:text="${foundAuthor}"></td>
+			<td th:text="${foundNarrator}"></td>
+			<td th:text="${foundPrice}"></td>
+		</tr>
+	</table>
+	<br />
+	<a href="/basket" class="myButton">add to basket</a><br /><br /><br />
+	<a href="/search" class="myButton">Continue searching</a>
+	<br />
+	<br />
+
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Insert title here</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h2 id="demoFont">please enter your login details</h2><br />
+<a href="/homepage" class="myButton">Home</a><br />
+
+<div class="error">
+<span th:text="${loginReminder}"></span></div><br />
+
+<form id="demoFont" action="FindAccount" method="get">
+   email : <input type="text" required name="email" /><br />
+   password : <input type="text" required name="password" />
+    <input type="submit" value="submit" />
+</form>
+
+
+
+</body>
+</html>

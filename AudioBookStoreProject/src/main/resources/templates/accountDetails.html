@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Account Details</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1 id="demoFont">Account Details</h1><br />
+<a href="/homepage" class="myButton">Home</a><br />
+<h2 id="demoFont">Billing address:</h2>
+	<div id="demoFont">
+		<p>
+			First line address: <span th:text="${session.loggedinUser.firstLineAddress}"></span>
+		</p>
+		<p>
+			Post code: <span th:text="${session.loggedinUser.postcode}"></span>
+		</p>
+	</div>
+	<a href="/updateAddress" class="myButton">Update Address</a><br />
+	<h2 id="demoFont">Purchase information:</h2>
+	<div id="demoFont">
+		<p>
+			CardName: <span th:text="${session.loggedinUser.cardName}"></span>
+		</p>
+		<p>
+			Card Number: <span th:text="${session.loggedinUser.cardNumber}"></span>
+		</p>
+		<p>
+			Expiry Date: <span th:text="${session.loggedinUser.expiryDate}"></span>
+		</p>
+	</div>
+	<a href="/updateCard" class="myButton">Update Card Details</a><br />
+</body>
+</html>

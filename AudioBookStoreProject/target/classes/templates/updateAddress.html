@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Update Address</title>
+<link rel="stylesheet" href="style.css">
+<style>
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+div {
+  width: 35%;
+  margin-left: 30%;
+  margin-right: 30% -moz-box-shadow: inset 0px 1px 0px 0px #ffffff;
+  height: 35%;
+  border-radius: 100px;
+  background-color: #ededed;
+  padding: 60px;
+}
+</style>
+</head>
+<body>
+<h1 id="demoFont">Update address details</h1>
+
+<a href="/accountDetails" class="myButton">Account Details</a><br /><br />
+<div>
+  <form action="updateAccountAddress" method="post">
+  
+    <label for="first line address">First Line Address</label>
+    <input type="text" id="first line address" required name="updateAddress" placeholder="first line of address..">
+    
+    <label for="postcode">Post code</label>
+    <input type="text" id="postcode" required name="updatePostCode" placeholder="Your postcode..">
+    
+
+    <input type="submit" value="Submit">
+  </form>
+</div>
+</body>
+</html>
